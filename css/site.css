@@ -1,0 +1,78 @@
+:root {
+    --primary-color: #1d5888;
+    --secondary-color: #ff993b;
+    --dark-color: #292929;
+    --white-color: #dff3e4;
+}
+
+body {
+    color: var(--primary-color);
+}
+
+nav {
+    background-color: var(--dark-color);
+}
+
+footer {
+    background-color: var(--dark-color);
+    padding-right: 1rem;
+}
+
+footer .social>a {
+    opacity: 0.75;
+    color: var(--white-color);
+}
+
+footer .social>a:hover {
+    opacity: 0.90;
+    color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+}
+
+main>.container {
+    padding: 60px 15px 0;
+}
+
+.sticky-nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Technology Icons Colors */
+.bsicon {
+    color: #8312FA;
+}
+
+.jsicon {
+    color: #F0DB4F;
+}
+
+.html5icon {
+    color: #E44D26;
+}
+
+.css3icon {
+    color: #0A71B8;
+}
+
+.checklist>li i {
+    color: var(--secondary-color);
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    font-size: 1.5rem;
+}
