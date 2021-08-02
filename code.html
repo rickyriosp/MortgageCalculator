@@ -67,9 +67,25 @@
                     <pre data-src="/js/site.js" class="line-numbers"></pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The Code is structured in one function.</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that displays an alert with a message of "Hello World".</p>
+                    <p>The Code is structured in three main functions, plus three helper functions.</p>
+                    <h5 class="pb-2 border-bottom border-2">getValues()</h5>
+                    <p>The <strong>getValues()</strong> function is responsible for retrieving the numbers the user provides in the input fields, parsing and validating them. If all inputs provided by the user are numbers then it will create the starting loan object and call the <strong>getPayments()</strong> and <strong>displayResults()</strong> functions described below.</p>
+                    <br>
+                    <h5 class="pb-2 border-bottom border-2">getPayments()</h5>
+                    <p>The <strong>getPayments()</strong> function takes one parameter: the loan object with the data. In this function we iterate over the duration of the loan term, and for each month all the required values are calculated. Every month data is stored in an array that will be used later to display the results. Finally the total values are tallied and the data is passed as the return value;
+                    <br>
+                    <h5 class="pb-2 border-bottom border-2">displayResults()</h5>
+                    <p>The <strong>displayResults()</strong> function takes one parameter: the loan object with the data. The HTML table is retrieved and emptied every time new data is parsed. A template was used to facilitate the reuse and construction of the table rows (see HTML page). All the information regarding a single month payment is added to a row.</p>
+                    <br>
+                    <p>Helper functions.</p>
+                    <h5 class="pb-2 border-bottom border-2">calcPayment()</h5>
+                    <p>The <strong>calcPayment()</strong> function takes three parameters: the loan amount, rate and term. It then calculates the user monthly payment for the duration of the loan.</p>
+                    <br>
+                    <h5 class="pb-2 border-bottom border-2">calcMonthlyRate()</h5>
+                    <p>The <strong>calcMonthlyRate()</strong> function takes one parameter: the loan interest rate. This rate correspond to the yearly interest, which is converted to a monthly interest rate to be used in further calculations.</p>
+                    <br>
+                    <h5 class="pb-2 border-bottom border-2">calcMonthlyInterest()</h5>
+                    <p>The <strong>calcMonthlyInterest()</strong> function takes two parameters: the current balance and the monthly interest rate. This is used to calculate how much is paid in interest each month.</p>
                 </div>
             </div>
         </div>
